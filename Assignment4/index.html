@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Increment count when button is clicked</title>
+</head>
+
+<body style="text-align: center;">
+	<h1 style="color: green;">
+		STORAGE ASSIGNMENT
+	</h1>
+
+	<h4>
+		Localscore 
+	</h4>
+
+	<button id="lBtn">Click</button>
+
+	<p>
+		Button Clicked <span
+		id="lDisplay">0</span> Times
+	</p>
+
+	<h4>
+		Session score 
+	</h4>
+
+	<button id="sBtn">Click</button>
+
+	<p>
+		Button Clicked <span
+		id="sDisplay">0</span> Times
+	</p>
+
+	<script type="text/javascript">
+
+		/*
+		*
+		* Local storage logic
+		*
+		*/
+         // Set Item
+        localStorage.setItem("lCount", 0);		
+        
+        // Retrieve
+        document.getElementById("lDisplay").innerHTML = localStorage.getItem("lCount");		
+
+		var lCnt = 0;
+		var btn = document.getElementById("lBtn");
+		var lDisp = document.getElementById("lDisplay");
+
+		btn.onclick = function () {
+			lCnt++;
+			localStorage.setItem("lCount", lCnt);
+			lDisp.innerHTML = lCnt;
+		}
+	
+		/*
+		*
+		* Session storage logic
+		*
+		*/
+		// Set Item
+		sessionStorage.setItem("sCount", 0);
+
+		// Retrieve
+		document.getElementById("sDisplay").innerHTML = sessionStorage.getItem("sCount");
+		
+		var sCnt = 0;
+		var btn = document.getElementById("sBtn");
+		var sDisp = document.getElementById("sDisplay");
+
+		btn.onclick = function () {
+			sCnt++;
+			localStorage.setItem("sCount", sCnt);
+			sDisp.innerHTML = sCnt;
+		}
+
+
+	</script>    
+    
+</body>
+
+</html>

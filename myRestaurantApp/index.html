@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title>SK Restaurant</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href=".\css\style.css">
+
+    <script src=".\scripts\menuList.js"></script>
+    <script src=".\scripts\tableList.js"></script>
+</head>
+
+<body>
+    <!--
+        Tables Section
+    -->
+    <div class="w3-sidebar sk-border-right w3-bar-block w3-large w3-light-grey " style="width:20%">
+        
+        <!-- Tables Title at center -->
+        <h3 class="w3-bar-item w3-center">Tables</h3>
+
+        <!-- Search Input Element for searching Table -->
+        <form class="w3-bar-item">
+            <input id="tSearchBar" onkeyup="search_table()" type="search" 
+                   name="tsearch" placeholder="Search table">
+        </form>
+
+        <!-- Tables List -->        
+        <a id="t1" ondrop="dropTb1(event)" ondragover="allowDrop(event)" href="#" class="w3-bar-item w3-button w3-border-bottom w3-padding-24 sk-table">Table-1 <br> <span id="t1Summary"></span> </a>
+        <a id="t2" ondrop="dropTb2(event)" ondragover="allowDrop(event)" href="#" class="w3-bar-item w3-button w3-border-bottom w3-padding-24 sk-table">Table-2 <br> <span id="t2Summary"></span> </a>
+        <a id="t3" ondrop="dropTb3(event)" ondragover="allowDrop(event)" href="#" class="w3-bar-item w3-button w3-border-bottom w3-padding-24 sk-table">Table-3 <br> <span id="t3Summary"></span> </a>
+        
+
+        <script src=".\scripts\tableHandler.js"></script>
+    </div>
+
+    <!--
+        Menu Section
+    -->
+
+    <div class="w3-light-grey" style="margin-left:20%">
+
+        <!-- Menu Title at center -->
+        <div class="w3-container w3-center w3-teal">
+            <h1>Menu</h1>
+        </div>
+
+        <!-- Search Input Element for searching Menu items -->
+        <div class="w3-container w3-sand w3-padding-32">
+            <input id="mSearchBar" onkeyup="search_menu()" type="text"
+                    name="search" size="50" placeholder="Search menu... by course, by food">
+        </div>
+
+        <!-- Menu item list -->
+        <div id="menuDisplay" class="w3-sidebar w3-bar-block w3-sand" style="width:100%"> 
+
+        </div>
+
+        <script src=".\scripts\menuHandler.js"></script>
+    
+    
+    </div>
+
+
+</body>
+
+
+
+
+</html>
